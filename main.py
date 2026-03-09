@@ -1,3 +1,4 @@
+# main.py
 from Services.Auth.login import iniciar_sesion
 from Services.Scraper.navigation import ir_a_taquilla, ir_a_comercial
 from Services.Scraper.scraper import obtener_datos_tabla

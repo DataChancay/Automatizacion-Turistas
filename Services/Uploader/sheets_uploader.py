@@ -23,7 +23,8 @@ def exportar_a_sheets(df, nombre_hoja, nombre_worksheet="Sheet1", creds_json_pat
     hoja = cliente.open(nombre_hoja).worksheet(nombre_worksheet)
 
     # Fecha actual como número serial para que Sheets la interprete como fecha
-    hoy = fecha_a_serial(datetime.now())
+    hoy = fecha_a_serial(datetime.combine(datetime.now().date(), datetime.min.time()))
+
 
     # Limpiar y convertir columnas numéricas
     if "PrecioUnit" in df.columns:
@@ -69,7 +70,7 @@ def exportar_a_sheets(df, nombre_hoja, nombre_worksheet="Sheet1", creds_json_pat
     # ========================
     # Formato de fecha en columna B
     format_cell_range(hoja, f"B{fila_actual}:B{fila_actual+len(valores)-1}", CellFormat(
-        numberFormat=NumberFormat(type="DATE", pattern="yyyy-mm-dd")
+        numberFormat=NumberFormat(type="DATE", pattern="dd/mm/yyyy")
     ))
 
     # Si existe columna Porcentaje, formatear
