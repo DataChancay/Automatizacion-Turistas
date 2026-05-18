@@ -32,7 +32,7 @@ def iniciar_sesion():
 
 
     # 3) Ir a la página de login
-    driver.get("http://161.132.243.102/boleteria_v5/login/")
+    driver.get("http://161.132.243.102:8081/boleteria_v5/login/")
 
     # 4) Esperar a que el input de DNI exista
     WebDriverWait(driver, 10).until(

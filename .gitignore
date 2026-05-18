@@ -1,3 +1,30 @@
 clave.json
 desktop.ini
 .env
+
+# Entornos virtuales
+venv_pc/
+.venv/
+
+# Archivos compilados de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Cache y archivos de testing
+.pytest_cache/
+.coverage
+
+# Archivos del sistema
+.DS_Store
+
+# Distribución y build
+*.egg-info/
+dist/
+build/
+
+# Configuración local de VS Code
+.vscode/
+
+venv_ofi/
